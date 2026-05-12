@@ -3,33 +3,16 @@ import { Check } from 'lucide-react';
 
 const CHANGES = [
   {
-    version: 'v0.3.0',
-    date: '2026-05-01',
+    version: 'v1.0.0',
+    date: '2026-05-12',
     items: [
-      '新增 AI 智能摘要功能，自动提取语音内容要点',
-      '优化 Whisper 模型加载速度，启动时间减少 40%',
-      '修复 macOS Ventura 兼容性问题',
-      '改进 Markdown 导出排版格式',
-    ],
-  },
-  {
-    version: 'v0.2.0',
-    date: '2026-04-15',
-    items: [
-      '新增 60+ 语言自动检测功能',
-      '支持 CUDA GPU 加速推理',
-      '添加录音音量可视化指示器',
-      '修复 Linux Wayland 下窗口闪烁问题',
-    ],
-  },
-  {
-    version: 'v0.1.0',
-    date: '2026-03-20',
-    items: [
-      '首次公开发布',
-      '支持基础的语音录制和转录功能',
-      '支持 Windows、macOS、Linux 三大平台',
-      'Markdown 格式导出',
+      '基于 llama.cpp 的本地 AI 推理引擎，支持 GGUF 量化模型',
+      '流式输出 (SSE)，AI 逐字回复，无需等待完整生成',
+      'DeepSeek-R1 等模型的思考过程展示，可折叠/展开',
+      '完整 Markdown 渲染：标题、代码块、引用、列表、链接等',
+      'Room 数据库本地持久化对话历史，支持左滑删除',
+      'Jetpack Compose + Material3 深色主题 UI',
+      '支持 OpenAI 兼容 API 的远程模式切换',
     ],
   },
 ];

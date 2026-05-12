@@ -1,30 +1,30 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Download, Mic, FileText, Rocket } from 'lucide-react';
+import { Download, Cpu, MessageSquare, Database } from 'lucide-react';
 
 const STEPS = [
   {
     num: '01',
     icon: <Download size={20} />,
-    title: '下载 & 安装',
-    description: '从 GitHub Release 下载对应平台的安装包，双击安装即可使用。支持 Windows、macOS、Linux。',
+    title: '下载 APK',
+    description: '从 GitHub Releases 下载最新 APK 安装包，在 Android 手机上安装。支持 Android 9+ (API 28)。',
   },
   {
     num: '02',
-    icon: <Mic size={20} />,
-    title: '开始录音',
-    description: '选择你的麦克风设备，点击录音按钮开始。VoxPocket 会自动检测语言并开始转录。',
+    icon: <Cpu size={20} />,
+    title: '下载模型',
+    description: '下载 GGUF 格式的大语言模型文件到手机存储。推荐 DeepSeek-R1、Qwen 等中文优化模型，根据手机性能选择量化规格。',
   },
   {
     num: '03',
-    icon: <FileText size={20} />,
-    title: '导出笔记',
-    description: '录制完成后，你可以查看 AI 摘要、编辑文字，然后一键导出为 Markdown 文件。',
+    icon: <MessageSquare size={20} />,
+    title: '开始对话',
+    description: '输入问题，AI 以流式输出逐字回复。支持 Markdown 渲染和思考过程显示，对话自动保存到本地。',
   },
   {
     num: '04',
-    icon: <Rocket size={20} />,
-    title: '融入工作流',
-    description: '导出的 Markdown 文件可直接导入 Obsidian、Notion 等工具，无缝融入你的笔记系统。',
+    icon: <Database size={20} />,
+    title: '管理对话',
+    description: '左滑删除对话、点击头像切换对话、查看历史记录。所有数据安全存储在手机 Room 数据库中。',
   },
 ];
 
@@ -34,7 +34,7 @@ export function GettingStarted() {
   return (
     <section id="getting-started" className="section-container" ref={ref}>
       <h2 className="section-title">快速<span className="text-gradient"> 开始</span></h2>
-      <p className="section-subtitle">四步上手，开始你的语音笔记之旅</p>
+      <p className="section-subtitle">四步上手，让 AI 在口袋里运行</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {STEPS.map((step, i) => (

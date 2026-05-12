@@ -60,7 +60,7 @@ export function Header() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="https://github.com/KunDaNbk/VoxPocket-Website"
+            href="https://github.com/KunDaNbk/VoxPocket/releases"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5 text-sm"
@@ -110,7 +110,7 @@ export function Header() {
         </ul>
         <div className="flex flex-col items-center gap-3 pt-8">
           <a
-            href="https://github.com/KunDaNbk/VoxPocket-Website"
+            href="https://github.com/KunDaNbk/VoxPocket/releases"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5"

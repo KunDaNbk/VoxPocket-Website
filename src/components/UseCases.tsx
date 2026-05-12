@@ -1,48 +1,27 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Mic, GraduationCap, Stethoscope, Briefcase } from 'lucide-react';
+import { GraduationCap, Code, PenLine, HelpCircle } from 'lucide-react';
 
 const CASES = [
-  {
-    icon: <Mic size={24} />,
-    title: '记者采访',
-    description: '实时转录采访内容，自动分段、标注说话人，采访结束即可获得完整稿件。',
-  },
-  {
-    icon: <GraduationCap size={24} />,
-    title: '学生课堂',
-    description: '录制课堂讲解，AI 自动提取重点，生成结构化复习笔记，备考更高效。',
-  },
-  {
-    icon: <Stethoscope size={24} />,
-    title: '会议记录',
-    description: '离线记录会议讨论，保护商业机密，自动生成会议纪要和待办事项清单。',
-  },
-  {
-    icon: <Briefcase size={24} />,
-    title: '创意灵感',
-    description: '随时随地捕捉灵感，边说边记，不打断思维流，写好导出继续创作。',
-  },
+  { icon: <GraduationCap size={24} />, title: '学习助手', description: '向AI提问知识问题，理解复杂概念，生成学习笔记。全部在本地完成，不受网络限制，随时随地查阅。' },
+  { icon: <Code size={24} />, title: '编程伙伴', description: '讨论代码问题，让AI解释算法逻辑，生成代码片段。支持完整的 Markdown 代码块渲染。' },
+  { icon: <PenLine size={24} />, title: '内容创作', description: '头脑风暴，文案润色，翻译校对。AI 帮你完善思路，所有草稿安全存储在你的手机上。' },
+  { icon: <HelpCircle size={24} />, title: '知识问答', description: '不依赖搜索引擎，本地模型直接回答。没有广告、没有追踪、你的问题只有你和AI知道。' },
 ];
 
 export function UseCases() {
   const ref = useScrollReveal();
-
   return (
     <section id="usecases" className="section-container" ref={ref}>
       <h2 className="section-title">使用<span className="text-gradient"> 场景</span></h2>
-      <p className="section-subtitle">无论你是什么角色，VoxPocket 都能提升你的效率</p>
-
+      <p className="section-subtitle">无论你的需求是什么，本地AI都能帮到你</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {CASES.map((item, i) => (
-          <div
-            key={item.title}
-            className={`card p-6 text-center group hover:-translate-y-1 transition-all duration-300 reveal-delay-${Math.min(i, 6)}`}
-          >
+        {CASES.map((c, i) => (
+          <div key={c.title} className={`card p-6 text-center group hover:-translate-y-1 transition-all duration-300 reveal-delay-${Math.min(i, 6)}`}>
             <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-accent-pink/10 flex items-center justify-center text-accent-pink group-hover:bg-accent-pink/20 transition-all">
-              {item.icon}
+              {c.icon}
             </div>
-            <h3 className="text-lg font-heading font-semibold text-white mb-2">{item.title}</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+            <h3 className="text-lg font-heading font-semibold text-white mb-2">{c.title}</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">{c.description}</p>
           </div>
         ))}
       </div>

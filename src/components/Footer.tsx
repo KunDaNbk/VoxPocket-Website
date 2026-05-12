@@ -16,8 +16,8 @@ const FOOTER_LINKS = {
     links: [
       { href: '#getting-started', label: '快速开始' },
       { href: '#faq', label: 'FAQ' },
-      { href: 'https://github.com/KunDaNbk/VoxPocket-Website', label: 'GitHub' },
-      { href: 'https://github.com/KunDaNbk/VoxPocket-Website/releases', label: '下载' },
+      { href: 'https://github.com/KunDaNbk/VoxPocket', label: 'GitHub' },
+      { href: 'https://github.com/KunDaNbk/VoxPocket/releases', label: '下载' },
     ],
   },
   legal: {
@@ -25,7 +25,7 @@ const FOOTER_LINKS = {
     links: [
       { href: '#', label: '隐私政策' },
       { href: '#', label: '使用条款' },
-      { href: 'https://github.com/KunDaNbk/VoxPocket-Website/blob/main/LICENSE', label: 'MIT 许可证' },
+      { href: 'https://github.com/KunDaNbk/VoxPocket/blob/main/LICENSE', label: 'MIT 许可证' },
     ],
   },
 };
@@ -45,10 +45,10 @@ export function Footer() {
               </span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-4">
-              本地优先的跨平台语音笔记应用，让你的声音变成有价值的笔记。
+              Android 本地 AI 助手，基于 llama.cpp 在手机上运行大语言模型。无需网络，隐私至上。
             </p>
             <a
-              href="https://github.com/KunDaNbk/VoxPocket-Website"
+              href="https://github.com/KunDaNbk/VoxPocket"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
@@ -83,7 +83,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} VoxPocket. All rights reserved.
           </p>
           <p className="text-gray-600 text-sm flex items-center gap-1">
-            Made with <Heart size={14} className="text-accent-pink" /> by the open source community
+            Made with <Heart size={14} className="text-accent-pink" /> by KunDaNbk
           </p>
         </div>
       </div>
